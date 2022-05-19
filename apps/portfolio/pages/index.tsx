@@ -100,7 +100,7 @@ export default function Web() {
             <Grid xs={12} direction={"column"}>
               <Text size={18} css={{ lineHeight: "$sm" }}>
                 <I18n
-                  en=" Currently living in Tijuana - Mexico, designing and developing web applications developing web applications, modernizing the websites of companies and small businesses."
+                  en=" Currently living in Tijuana - Mexico, designing and developing web applications, modernizing the websites of companies and small businesses."
                   es="Actualmente viviendo en Tijuana - Mexico, diseñando y
               desarrollando aplicaciónes web, modernizando los sitios web de
               empresas y pequeños negocios."
@@ -109,7 +109,7 @@ export default function Web() {
               <Spacer y={0.2} />
               <Text size={18} css={{ lineHeight: "$sm" }}>
                 <I18n
-                  en="Familiar with technologies such as Figma, React, Nextjs and StrapiCMS."
+                  en="knowledge in technologies such as Figma, React, Nextjs and StrapiCMS."
                   es="Familiarizado con tecnologias como Figma, React, Nextjs y
                   StrapiCMS."
                 />
