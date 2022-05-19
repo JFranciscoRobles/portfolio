@@ -1,7 +1,7 @@
 import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { ReactChild } from "react";
-import { lightTheme } from "./themes";
+import { lightTheme, darkTheme } from "./themes";
 
 type Props = {
   children: ReactChild;
@@ -11,10 +11,11 @@ function NextUIProviderWraper({ children }: Props) {
   return (
     <NextUIProvider>
       <NextThemesProvider
-        defaultTheme="light"
+        defaultTheme="system"
         attribute="class"
         value={{
           light: lightTheme.className,
+          dark: darkTheme.className,
         }}
       >
         {children}

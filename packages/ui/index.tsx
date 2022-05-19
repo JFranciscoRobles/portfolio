@@ -1,7 +1,6 @@
 import * as React from "react";
 import * as themes from "./themes";
 import * as NextUIProviderWraper from "./NextUIProviderWraper";
-import * as Badged from "./badged/Badged";
-import * as Toast from "./toast/Toast";
+import * as ToggleTheme from "./ToggleTheme";
 
-export { themes, NextUIProviderWraper, Badged, Toast };
+export { themes, NextUIProviderWraper, ToggleTheme };

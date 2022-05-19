@@ -6,9 +6,10 @@ import {
   Spacer,
   Button,
   Card,
+  Link,
 } from "@nextui-org/react";
 
-import { MdEmail, MdOutlineLightMode } from "react-icons/md";
+import { MdEmail } from "react-icons/md";
 import { FaGithub, FaLinkedin, FaReact, FaTwitter } from "react-icons/fa";
 import {
   SiTypescript,
@@ -21,18 +22,51 @@ import {
   SiTailwindcss,
   SiPrisma,
 } from "react-icons/si";
+import { ToggleTheme } from "ui";
+import { I18n } from "nextjs-i18n";
+import { useRouter } from "next/router";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import { tsParticles, ISourceOptions } from "tsparticles-engine";
 
 export default function Web() {
+  const particlesInit = async (main: any) => {
+    await loadFull(tsParticles);
+  };
+
+  const { locale } = useRouter();
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push("/", "/", { locale: locale === "en" ? "es" : "en" });
+  };
   return (
-    <Container sm css={{ my: "$xl" }}>
-      <Grid.Container justify="flex-end">
-        <Button auto light icon={<MdOutlineLightMode fill="currentColor" />} />
-        <Button auto light>
-          EN / ES
+    <Container sm css={{ my: "$xs" }}>
+      <Particles id="tsparticles" options={options} init={particlesInit} />
+      <Grid.Container justify="flex-end" alignItems="center">
+        <ToggleTheme.default />
+        <Button auto light onClick={() => handleClick()}>
+          <Text
+            size={14}
+            css={{ fontWeight: locale === "en" ? "bold" : "normal" }}
+          >
+            EN
+          </Text>
+          /
+          <Text
+            size={14}
+            css={{ fontWeight: locale === "es" ? "bold" : "normal" }}
+          >
+            ES
+          </Text>
         </Button>
-        <Button auto>!Contratame!</Button>
+        <Link href="mailto:josefrancisco.roblesacosta@gmail.com">
+          <Button size={"sm"}>
+            <I18n en="Hire me!" es="¡Contratame!" />
+          </Button>
+        </Link>
       </Grid.Container>
-      <Spacer y={2} />
+      <Spacer y={1} />
       <Grid.Container>
         <Grid xs={12} md={4}>
           <Image
@@ -60,46 +94,70 @@ export default function Web() {
                   lineHeight: "$xs",
                 }}
               >
-                A JS Full-Stack Developer
+                JS Full Stack Developer
               </Text>
             </Grid>
-            <Grid xs={12}>
+            <Grid xs={12} direction={"column"}>
               <Text size={18} css={{ lineHeight: "$sm" }}>
-                Actualmente viviendo en Tijuana - Mexico, diseñando y
-                desarrollando aplicaciónes web, modernizando los sitios web de
-                empresas y pequeños negocios. Familiarizado con tecnologias como
-                Figma, React, Nextjs y Strapi.
+                <I18n
+                  en=" Currently living in Tijuana - Mexico, designing and developing web applications developing web applications, modernizing the websites of companies and small businesses."
+                  es="Actualmente viviendo en Tijuana - Mexico, diseñando y
+              desarrollando aplicaciónes web, modernizando los sitios web de
+              empresas y pequeños negocios."
+                />
+              </Text>
+              <Spacer y={0.2} />
+              <Text size={18} css={{ lineHeight: "$sm" }}>
+                <I18n
+                  en="Familiar with technologies such as Figma, React, Nextjs and StrapiCMS."
+                  es="Familiarizado con tecnologias como Figma, React, Nextjs y
+                  StrapiCMS."
+                />
               </Text>
             </Grid>
             <Grid xs={12}>
               <Grid.Container justify="flex-end">
                 <Grid>
-                  <Button
-                    auto
-                    light
-                    icon={<FaGithub size={20} fill="currentColor" />}
-                  />
+                  <Link
+                    href="https://github.com/JFranciscoRobles"
+                    target="_blank"
+                  >
+                    <Button
+                      auto
+                      light
+                      icon={<FaGithub size={20} fill="currentColor" />}
+                    />
+                  </Link>
                 </Grid>
                 <Grid>
-                  <Button
-                    auto
-                    light
-                    icon={<FaLinkedin size={20} fill="currentColor" />}
-                  />
+                  <Link
+                    href="https://www.linkedin.com/in/jfranciscorobles/"
+                    target="_blank"
+                  >
+                    <Button
+                      auto
+                      light
+                      icon={<FaLinkedin size={20} fill="currentColor" />}
+                    />
+                  </Link>
                 </Grid>
                 <Grid>
-                  <Button
-                    auto
-                    light
-                    icon={<MdEmail size={20} fill="currentColor" />}
-                  />
+                  <Link href="mailto:josefrancisco.roblesacosta@gmail.com">
+                    <Button
+                      auto
+                      light
+                      icon={<MdEmail size={20} fill="currentColor" />}
+                    />
+                  </Link>
                 </Grid>
                 <Grid>
-                  <Button
-                    auto
-                    light
-                    icon={<FaTwitter size={20} fill="currentColor" />}
-                  />
+                  <Link href="https://twitter.com/JFrankRobles" target="_blank">
+                    <Button
+                      auto
+                      light
+                      icon={<FaTwitter size={20} fill="currentColor" />}
+                    />
+                  </Link>
                 </Grid>
               </Grid.Container>
             </Grid>
@@ -117,7 +175,10 @@ export default function Web() {
               lineHeight: "$xs",
             }}
           >
-            Tecnologias que amo utilizar
+            <I18n
+              en="Technologies I love to use"
+              es="Tecnologías que amo utilizar"
+            />
           </Text>
         </Grid>
         <Grid xs={12}>
@@ -136,80 +197,45 @@ export default function Web() {
         </Grid>
       </Grid.Container>
 
-      <Grid.Container gap={2}>
-        <Grid xs={12}>
-          <Text
-            h2
-            size={28}
-            weight={"semibold"}
-            css={{
-              lineHeight: "$xs",
-            }}
-          >
-            Proyectos en los que he trabajado
-          </Text>
-        </Grid>
-        <Grid xs={12}>
-          <Grid.Container gap={2}>
-            <Grid xs={12}>
-              <Text h3>Probien Bienes Raices Exclusivos (en proceso)</Text>
-            </Grid>
-
-            <Grid xs={12}>
-              <Container>
-                <Image src={"/probienPrincipal.png"} alt={"asds"} />
-              </Container>
-            </Grid>
-            <Grid xs={12} direction={"column"}>
-              <Text size={18} css={{ lineHeight: "$sm" }}>
-                Proyecto Full-Stack Probien Bienes Raices es una Inmobiliaria de
-                la Ciudad de Tijuana - Mexico.
-              </Text>
-              <Spacer y={0.2} />
-              <Text size={18} css={{ lineHeight: "$sm" }}>
-                Me contrataron para desarrollar un nuevo Catalogo para la
-                empresa.
-              </Text>
-              <Spacer y={0.2} />
-              <Text size={18} css={{ lineHeight: "$sm" }}>
-                Debido a que la velocidad de carga de cada pagina es muy
-                importante y los datos no se actualizan de forma masiva, se opto
-                por utilizar Nextjs y aprovechar la tenica de SSG(static site
-                generation).
-              </Text>
-              <Spacer y={0.2} />
-              <Text size={18} css={{ lineHeight: "$sm" }}>
-                Por la corta duración de desarrollo se decidio utilizar Strapi
-                como CMS debido a su sencilla implementación.
-              </Text>
-            </Grid>
-          </Grid.Container>
-        </Grid>
-      </Grid.Container>
       <Grid.Container as="footer" justify="flex-end">
         <Grid>
-          <Button
-            auto
-            light
-            icon={<FaGithub size={20} fill="currentColor" />}
-          />
+          <Link href="https://github.com/JFranciscoRobles" target="_blank">
+            <Button
+              auto
+              light
+              icon={<FaGithub size={20} fill="currentColor" />}
+            />
+          </Link>
         </Grid>
         <Grid>
-          <Button
-            auto
-            light
-            icon={<FaLinkedin size={20} fill="currentColor" />}
-          />
+          <Link
+            href="https://www.linkedin.com/in/jfranciscorobles/"
+            target="_blank"
+          >
+            <Button
+              auto
+              light
+              icon={<FaLinkedin size={20} fill="currentColor" />}
+            />
+          </Link>
         </Grid>
         <Grid>
-          <Button auto light icon={<MdEmail size={20} fill="currentColor" />} />
+          <Link href="mailto:josefrancisco.roblesacosta@gmail.com">
+            <Button
+              auto
+              light
+              icon={<MdEmail size={20} fill="currentColor" />}
+            />
+          </Link>
         </Grid>
         <Grid>
-          <Button
-            auto
-            light
-            icon={<FaTwitter size={20} fill="currentColor" />}
-          />
+          <Link href="https://twitter.com/JFrankRobles" target="_blank">
+            <Button
+              auto
+              light
+              icon={<FaTwitter size={20} fill="currentColor" />}
+            />
+          </Link>
         </Grid>
       </Grid.Container>
     </Container>
@@ -218,7 +244,14 @@ export default function Web() {
 
 const TecnologiesCard = ({ data }: CardProps) => {
   return (
-    <Card hoverable>
+    <Card
+      hoverable
+      css={{
+        "&:hover": {
+          backgroundColor: data.color,
+        },
+      }}
+    >
       <Card.Body>
         <Grid.Container justify="center">{data.logo}</Grid.Container>
       </Card.Body>
@@ -233,6 +266,7 @@ type typeTecnlogias = {
   nombre: string;
   logo: any;
   url: string;
+  color: string;
 };
 
 type CardProps = {
@@ -244,22 +278,26 @@ const dataTecnlogiasFront: typeTecnlogias[] = [
     nombre: "React",
     logo: <FaReact size={30} width={"100%"} />,
     url: "",
+    color: "$blue300",
   },
   {
     nombre: "Nextjs",
     logo: <SiNextdotjs size={30} width={"100%"} />,
     url: "",
+    color: "$gray300",
   },
 
   {
     nombre: "Graphql",
     logo: <SiGraphql size={30} width={"100%"} />,
     url: "",
+    color: "$purple300",
   },
   {
     nombre: "TailwindCss",
     logo: <SiTailwindcss size={30} width={"100%"} />,
     url: "",
+    color: "$blue300",
   },
   {
     nombre: "NextUi",
@@ -269,6 +307,7 @@ const dataTecnlogiasFront: typeTecnlogias[] = [
       </Text>
     ),
     url: "",
+    color: "$gray300",
   },
 
   {
@@ -279,12 +318,14 @@ const dataTecnlogiasFront: typeTecnlogias[] = [
       </Text>
     ),
     url: "",
+    color: "$purple300",
   },
 
   {
     nombre: "PrismaDB",
     logo: <SiPrisma size={30} width={"100%"} />,
     url: "",
+    color: "$green300",
   },
 ];
 
@@ -293,30 +334,72 @@ const dataTecnologiasBack: typeTecnlogias[] = [
     nombre: "Github",
     logo: <FaGithub size={30} width={"100%"} />,
     url: "",
+    color: "$gray300",
   },
   {
     nombre: "Typescript",
     logo: <SiTypescript size={30} width={"100%"} />,
     url: "",
+    color: "$red300",
   },
   {
     nombre: "Supabase",
     logo: <SiSupabase size={30} width={"100%"} />,
     url: "",
+    color: "$yellow300",
   },
   {
     nombre: "Strapi",
     logo: <SiStrapi size={30} width={"100%"} />,
     url: "",
+    color: "$blue300",
   },
   {
     nombre: "Vercel",
     logo: <SiVercel size={30} width={"100%"} />,
     url: "",
+    color: "$gray300",
   },
   {
     nombre: "DigitalOcean",
     logo: <SiDigitalocean size={30} width={"100%"} />,
     url: "",
+    color: "$blue300",
   },
 ];
+
+let options: ISourceOptions = {
+  fpsLimit: 120,
+  background: {
+    color: "transparent",
+  },
+  particles: {
+    number: {
+      value: 13,
+    },
+    color: {
+      value: ["#C9C9C9"],
+    },
+    shape: {
+      type: "circle",
+    },
+    opacity: {
+      value: 0.3,
+    },
+    size: {
+      value: { min: 30, max: 50 },
+    },
+    move: {
+      enable: true,
+      speed: {
+        min: 2,
+        max: 2,
+      },
+      outModes: {
+        default: "bounce",
+      },
+    },
+  },
+
+  detectRetina: true,
+};

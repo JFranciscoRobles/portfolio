@@ -28,3 +28,7 @@ export const lightTheme = createTheme({
     },
   },
 });
+
+export const darkTheme = createTheme({
+  type: "dark",
+});
