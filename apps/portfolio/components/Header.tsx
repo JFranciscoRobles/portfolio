@@ -8,7 +8,7 @@ type Props = {};
 
 function Header({}: Props) {
   return (
-    <Grid.Container>
+    <Grid.Container gap={1}>
       <Grid xs={12} md={4} justify="center">
         <Image
           style={{ borderRadius: "7%" }}

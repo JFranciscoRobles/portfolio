@@ -6,4 +6,7 @@ module.exports = withTM({
     defaultLocale: "es",
     locales: ["en", "es"],
   },
+  images: {
+    format: ["image/webp", "image/png", "image/jpeg"],
+  },
 });
