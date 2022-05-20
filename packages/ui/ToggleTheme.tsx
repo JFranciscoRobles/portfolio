@@ -12,9 +12,24 @@ function ToggleTheme({}: Props) {
   return (
     <>
       {!isDark ? (
-        <Button light auto icon={<BiSun />} onClick={() => setTheme("dark")} />
+        <Button
+          css={{
+            "&:hover": {
+              backgroundColor: "$gray300",
+            },
+          }}
+          light
+          auto
+          icon={<BiSun />}
+          onClick={() => setTheme("dark")}
+        />
       ) : (
         <Button
+          css={{
+            "&:hover": {
+              backgroundColor: "$gray300",
+            },
+          }}
           light
           auto
           icon={<BiMoon />}
