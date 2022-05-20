@@ -34,30 +34,6 @@ export const dataTecnologias: typeTecnlogias[] = [
     color: "$red300",
   },
   {
-    nombre: "Supabase",
-    logo: <SiSupabase size={30} width={"100%"} />,
-    url: "",
-    color: "$yellow300",
-  },
-  {
-    nombre: "Strapi",
-    logo: <SiStrapi size={30} width={"100%"} />,
-    url: "",
-    color: "$blue300",
-  },
-  {
-    nombre: "Vercel",
-    logo: <SiVercel size={30} width={"100%"} />,
-    url: "",
-    color: "$gray300",
-  },
-  {
-    nombre: "DigitalOcean",
-    logo: <SiDigitalocean size={30} width={"100%"} />,
-    url: "",
-    color: "$blue300",
-  },
-  {
     nombre: "React",
     logo: <FaReact size={30} width={"100%"} />,
     url: "",
@@ -70,12 +46,6 @@ export const dataTecnologias: typeTecnlogias[] = [
     color: "$gray300",
   },
 
-  {
-    nombre: "Graphql",
-    logo: <SiGraphql size={30} width={"100%"} />,
-    url: "",
-    color: "$purple300",
-  },
   {
     nombre: "TailwindCss",
     logo: <SiTailwindcss size={30} width={"100%"} />,
@@ -109,5 +79,23 @@ export const dataTecnologias: typeTecnlogias[] = [
     logo: <SiPrisma size={30} width={"100%"} />,
     url: "",
     color: "$green300",
+  },
+  {
+    nombre: "Strapi",
+    logo: <SiStrapi size={30} width={"100%"} />,
+    url: "",
+    color: "$blue300",
+  },
+  {
+    nombre: "Vercel",
+    logo: <SiVercel size={30} width={"100%"} />,
+    url: "",
+    color: "$gray300",
+  },
+  {
+    nombre: "DigitalOcean",
+    logo: <SiDigitalocean size={30} width={"100%"} />,
+    url: "",
+    color: "$blue300",
   },
 ];

@@ -6,7 +6,7 @@ const TecnologiesContainer = () => {
   return (
     <Grid.Container gap={1}>
       {dataTecnologias.map((item, index) => (
-        <Grid key={index}>
+        <Grid xs={4} md={3} key={index}>
           <TecnologiesCard data={item} />
         </Grid>
       ))}

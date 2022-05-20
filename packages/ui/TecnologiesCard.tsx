@@ -19,7 +19,9 @@ const TecnologiesCard = ({ data }: CardProps) => {
         <Grid.Container justify="center">{data.logo}</Grid.Container>
       </Card.Body>
       <Card.Footer>
-        <Text b>{data.nombre}</Text>
+        <Text b css={{ textAlign: "center", w: "100%" }}>
+          {data.nombre}
+        </Text>
       </Card.Footer>
     </Card>
   );
