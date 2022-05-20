@@ -1,5 +1,6 @@
-import { Grid, Image, Spacer, Text } from "@nextui-org/react";
+import { Grid, Spacer, Text } from "@nextui-org/react";
 import { I18n } from "nextjs-i18n";
+import Image from "next/image";
 import React from "react";
 import SocialBar from "./SocialBar";
 
@@ -8,10 +9,12 @@ type Props = {};
 function Header({}: Props) {
   return (
     <Grid.Container>
-      <Grid xs={12} md={4}>
+      <Grid xs={12} md={4} justify="center">
         <Image
+          style={{ borderRadius: "7%" }}
           width={180}
           height={210}
+          priority
           src="/avatar.webp"
           alt="Jose Francisco Robles Acosta"
           objectFit="cover"
