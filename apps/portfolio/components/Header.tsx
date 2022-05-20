@@ -12,7 +12,7 @@ function Header({}: Props) {
         <Image
           width={180}
           height={210}
-          src="/avatar.jpg"
+          src="/avatar.webp"
           alt="Jose Francisco Robles Acosta"
           objectFit="cover"
         />
@@ -28,7 +28,7 @@ function Header({}: Props) {
             <Text
               h2
               size={22}
-              color="$blue500"
+              color="$blue800"
               weight={"semibold"}
               css={{
                 lineHeight: "$xs",

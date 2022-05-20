@@ -1,4 +1,4 @@
-import { Grid, Link, Button } from "@nextui-org/react";
+import { Grid, Link } from "@nextui-org/react";
 import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -12,7 +12,7 @@ function SocialBar({}: Props) {
       {options.map((option) => (
         <Grid key={option.name}>
           <Link href={option.href} target={option.target ? "_blank" : "_self"}>
-            <UiButton auto light icon={option.icon} />
+            <UiButton aria-label={option.name} auto light icon={option.icon} />
           </Link>
         </Grid>
       ))}

@@ -27,7 +27,9 @@ export default function Web() {
 
       <Spacer y={1} />
       <Container>
-        <Card color={"error"}>This website is under developed</Card>
+        <Card role={"alert"} color={"primary"}>
+          This website is under developed
+        </Card>
       </Container>
       <SocialBar />
     </Layout>

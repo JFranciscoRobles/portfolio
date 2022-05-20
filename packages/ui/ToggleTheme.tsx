@@ -14,6 +14,7 @@ function ToggleTheme({}: Props) {
     <>
       {!isDark ? (
         <UiButton
+          aria-label={"Dark Mode"}
           light
           auto
           icon={<BiSun />}
@@ -21,6 +22,7 @@ function ToggleTheme({}: Props) {
         />
       ) : (
         <UiButton
+          aria-label={"Light Mode"}
           light
           auto
           icon={<BiMoon />}

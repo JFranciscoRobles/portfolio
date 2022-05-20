@@ -21,6 +21,10 @@ function Layout({ children }: Props) {
       <BackgroundParticles />
       <Head>
         <title>J.Francisco Robles - Portfolio</title>
+        <meta
+          name="description"
+          content="J. Francisco Robles Js Full Stack Developer, actualmente viviendo en Tijuana - Mexico, diseñando y desarrollando aplicaciones web."
+        />
       </Head>
       <Grid.Container justify="flex-end" alignItems="center">
         <ToggleTheme />
