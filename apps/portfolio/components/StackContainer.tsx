@@ -24,7 +24,7 @@ function StackContainer({}: Props) {
         </Text>
       </Grid>
       <Grid xs={12}>
-        <TecnologiesContainer.default />
+        <TecnologiesContainer />
       </Grid>
     </Grid.Container>
   );

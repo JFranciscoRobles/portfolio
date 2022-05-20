@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { I18n } from "nextjs-i18n";
 import React from "react";
-import { BackgroundParticles, ToggleTheme } from "ui";
+import { BackgroundParticles, ToggleTheme, UiButton } from "ui";
 
 type Props = {
   children: React.ReactNode;
@@ -18,22 +18,13 @@ function Layout({ children }: Props) {
   };
   return (
     <Container sm css={{ my: "$xs" }}>
-      <BackgroundParticles.default />
+      <BackgroundParticles />
       <Head>
         <title>J.Francisco Robles - Portfolio</title>
       </Head>
       <Grid.Container justify="flex-end" alignItems="center">
-        <ToggleTheme.default />
-        <Button
-          css={{
-            "&:hover": {
-              backgroundColor: "$gray300",
-            },
-          }}
-          auto
-          light
-          onClick={() => handleClick()}
-        >
+        <ToggleTheme />
+        <UiButton auto light onClick={() => handleClick()}>
           <Text
             size={14}
             css={{ fontWeight: locale === "en" ? "bold" : "normal" }}
@@ -47,7 +38,7 @@ function Layout({ children }: Props) {
           >
             ES
           </Text>
-        </Button>
+        </UiButton>
         <Link href="mailto:josefrancisco.roblesacost    a@gmail.com">
           <Button size={"sm"}>
             <I18n en="Hire me!" es="¡Contratame!" />

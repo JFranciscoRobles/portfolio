@@ -2,6 +2,7 @@ import { Grid, Link, Button } from "@nextui-org/react";
 import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { UiButton } from "ui";
 
 type Props = {};
 
@@ -11,16 +12,7 @@ function SocialBar({}: Props) {
       {options.map((option) => (
         <Grid key={option.name}>
           <Link href={option.href} target={option.target ? "_blank" : "_self"}>
-            <Button
-              css={{
-                "&:hover": {
-                  backgroundColor: "$gray300",
-                },
-              }}
-              auto
-              light
-              icon={option.icon}
-            />
+            <UiButton auto light icon={option.icon} />
           </Link>
         </Grid>
       ))}

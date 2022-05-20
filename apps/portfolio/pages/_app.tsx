@@ -1,4 +1,4 @@
-import NextUIProviderWraper from "ui/NextUIProviderWraper";
+import { NextUIProviderWraper } from "ui";
 
 function MyApp({ Component, pageProps }: any) {
   return (

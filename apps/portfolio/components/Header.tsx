@@ -1,4 +1,4 @@
-import { Grid, Image, Link, Spacer, Text } from "@nextui-org/react";
+import { Grid, Image, Spacer, Text } from "@nextui-org/react";
 import { I18n } from "nextjs-i18n";
 import React from "react";
 import SocialBar from "./SocialBar";
