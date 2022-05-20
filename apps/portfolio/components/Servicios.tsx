@@ -66,7 +66,7 @@ function Servicios({}: Props) {
         >
           <I18n
             en="I can help you develop a"
-            es="Puedo ayudarte a desarrollar un"
+            es="Puedo ayudarte a desarrollar"
           />
         </Text>
       </Grid>
