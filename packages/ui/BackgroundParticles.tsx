@@ -47,4 +47,18 @@ let options: ISourceOptions = {
     },
   },
   detectRetina: true,
+  interactivity: {
+    events: {
+      onHover: {
+        enable: true,
+        mode: "bubble",
+      },
+    },
+    modes: {
+      bubble: {
+        distance: 80,
+        color: "random",
+      },
+    },
+  },
 };

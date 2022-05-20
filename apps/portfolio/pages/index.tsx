@@ -17,6 +17,7 @@ import {
 } from "ui";
 import { I18n } from "nextjs-i18n";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 export default function Web() {
   const { locale } = useRouter();
@@ -28,6 +29,9 @@ export default function Web() {
   return (
     <Container sm css={{ my: "$xs" }}>
       <BackgroundParticles.default />
+      <Head>
+        <title>J.Francisco Robles - Portfolio</title>
+      </Head>
       <Grid.Container justify="flex-end" alignItems="center">
         <ToggleTheme.default />
         <Button auto light onClick={() => handleClick()}>
