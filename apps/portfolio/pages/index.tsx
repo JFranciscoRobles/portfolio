@@ -5,35 +5,20 @@ import {
   Image,
   Spacer,
   Button,
-  Card,
   Link,
 } from "@nextui-org/react";
-
 import { MdEmail } from "react-icons/md";
-import { FaGithub, FaLinkedin, FaReact, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import {
-  SiTypescript,
-  SiSupabase,
-  SiStrapi,
-  SiVercel,
-  SiDigitalocean,
-  SiNextdotjs,
-  SiGraphql,
-  SiTailwindcss,
-  SiPrisma,
-} from "react-icons/si";
-import { ToggleTheme } from "ui";
+  BackgroundParticles,
+  TecnologiesCard,
+  TecnologiesContainer,
+  ToggleTheme,
+} from "ui";
 import { I18n } from "nextjs-i18n";
 import { useRouter } from "next/router";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
-import { tsParticles, ISourceOptions } from "tsparticles-engine";
 
 export default function Web() {
-  const particlesInit = async (main: any) => {
-    await loadFull(tsParticles);
-  };
-
   const { locale } = useRouter();
   const router = useRouter();
 
@@ -42,7 +27,7 @@ export default function Web() {
   };
   return (
     <Container sm css={{ my: "$xs" }}>
-      <Particles id="tsparticles" options={options} init={particlesInit} />
+      <BackgroundParticles.default />
       <Grid.Container justify="flex-end" alignItems="center">
         <ToggleTheme.default />
         <Button auto light onClick={() => handleClick()}>
@@ -94,7 +79,7 @@ export default function Web() {
                   lineHeight: "$xs",
                 }}
               >
-                JS Full Stack Developer
+                Js Full Stack Developer
               </Text>
             </Grid>
             <Grid xs={12} direction={"column"}>
@@ -109,7 +94,7 @@ export default function Web() {
               <Spacer y={0.2} />
               <Text size={18} css={{ lineHeight: "$sm" }}>
                 <I18n
-                  en="knowledge in technologies such as Figma, React, Nextjs and StrapiCMS."
+                  en="Knowledge in technologies such as Figma, React, Nextjs and StrapiCMS."
                   es="Familiarizado con tecnologias como Figma, React, Nextjs y
                   StrapiCMS."
                 />
@@ -182,18 +167,7 @@ export default function Web() {
           </Text>
         </Grid>
         <Grid xs={12}>
-          <Grid.Container gap={2}>
-            {dataTecnologiasBack.map((item, index) => (
-              <Grid key={index}>
-                <TecnologiesCard data={item} />
-              </Grid>
-            ))}
-            {dataTecnlogiasFront.map((item, index) => (
-              <Grid key={index}>
-                <TecnologiesCard data={item} />
-              </Grid>
-            ))}
-          </Grid.Container>
+          <TecnologiesContainer.default />
         </Grid>
       </Grid.Container>
 
@@ -241,165 +215,3 @@ export default function Web() {
     </Container>
   );
 }
-
-const TecnologiesCard = ({ data }: CardProps) => {
-  return (
-    <Card
-      hoverable
-      css={{
-        "&:hover": {
-          backgroundColor: data.color,
-        },
-      }}
-    >
-      <Card.Body>
-        <Grid.Container justify="center">{data.logo}</Grid.Container>
-      </Card.Body>
-      <Card.Footer>
-        <Text b>{data.nombre}</Text>
-      </Card.Footer>
-    </Card>
-  );
-};
-
-type typeTecnlogias = {
-  nombre: string;
-  logo: any;
-  url: string;
-  color: string;
-};
-
-type CardProps = {
-  data: typeTecnlogias;
-};
-
-const dataTecnlogiasFront: typeTecnlogias[] = [
-  {
-    nombre: "React",
-    logo: <FaReact size={30} width={"100%"} />,
-    url: "",
-    color: "$blue300",
-  },
-  {
-    nombre: "Nextjs",
-    logo: <SiNextdotjs size={30} width={"100%"} />,
-    url: "",
-    color: "$gray300",
-  },
-
-  {
-    nombre: "Graphql",
-    logo: <SiGraphql size={30} width={"100%"} />,
-    url: "",
-    color: "$purple300",
-  },
-  {
-    nombre: "TailwindCss",
-    logo: <SiTailwindcss size={30} width={"100%"} />,
-    url: "",
-    color: "$blue300",
-  },
-  {
-    nombre: "NextUi",
-    logo: (
-      <Text size={30} css={{ lineHeight: 1 }}>
-        NextUI
-      </Text>
-    ),
-    url: "",
-    color: "$gray300",
-  },
-
-  {
-    nombre: "RadixUi",
-    logo: (
-      <Text size={30} css={{ lineHeight: 1 }}>
-        Radix
-      </Text>
-    ),
-    url: "",
-    color: "$purple300",
-  },
-
-  {
-    nombre: "PrismaDB",
-    logo: <SiPrisma size={30} width={"100%"} />,
-    url: "",
-    color: "$green300",
-  },
-];
-
-const dataTecnologiasBack: typeTecnlogias[] = [
-  {
-    nombre: "Github",
-    logo: <FaGithub size={30} width={"100%"} />,
-    url: "",
-    color: "$gray300",
-  },
-  {
-    nombre: "Typescript",
-    logo: <SiTypescript size={30} width={"100%"} />,
-    url: "",
-    color: "$red300",
-  },
-  {
-    nombre: "Supabase",
-    logo: <SiSupabase size={30} width={"100%"} />,
-    url: "",
-    color: "$yellow300",
-  },
-  {
-    nombre: "Strapi",
-    logo: <SiStrapi size={30} width={"100%"} />,
-    url: "",
-    color: "$blue300",
-  },
-  {
-    nombre: "Vercel",
-    logo: <SiVercel size={30} width={"100%"} />,
-    url: "",
-    color: "$gray300",
-  },
-  {
-    nombre: "DigitalOcean",
-    logo: <SiDigitalocean size={30} width={"100%"} />,
-    url: "",
-    color: "$blue300",
-  },
-];
-
-let options: ISourceOptions = {
-  fpsLimit: 120,
-  background: {
-    color: "transparent",
-  },
-  particles: {
-    number: {
-      value: 13,
-    },
-    color: {
-      value: ["#C9C9C9"],
-    },
-    shape: {
-      type: "circle",
-    },
-    opacity: {
-      value: 0.3,
-    },
-    size: {
-      value: { min: 30, max: 50 },
-    },
-    move: {
-      enable: true,
-      speed: {
-        min: 2,
-        max: 2,
-      },
-      outModes: {
-        default: "bounce",
-      },
-    },
-  },
-
-  detectRetina: true,
-};
