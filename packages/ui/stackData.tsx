@@ -1,11 +1,9 @@
 import {
   SiTypescript,
-  SiSupabase,
   SiStrapi,
   SiVercel,
   SiDigitalocean,
   SiNextdotjs,
-  SiGraphql,
   SiTailwindcss,
   SiPrisma,
 } from "react-icons/si";
