@@ -1,0 +1,33 @@
+{
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "display": "standalone",
+    "scope": "/",
+    "landscape":"portrait",
+    "start_url": "/",
+    "name": "J. Francisco Robles - Portfolio",
+    "short_name": "JF Portfolio",
+    "description": "Portfolio of J. Francisco Robles",
+    "icons": [
+        {
+            "src": "/logo.svg",
+            "sizes": "192x192",
+            "type": "image/svg"
+        },
+        {
+            "src": "/logo.svg",
+            "sizes": "256x256",
+            "type": "image/svg"
+        },
+        {
+            "src": "/logo.svg",
+            "sizes": "384x384",
+            "type": "image/svg"
+        },
+        {
+            "src": "/logo.svg",
+            "sizes": "512x512",
+            "type": "image/svg"
+        }
+    ]
+}
