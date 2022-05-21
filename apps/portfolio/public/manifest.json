@@ -3,7 +3,7 @@
     "background_color": "#000000",
     "display": "standalone",
     "scope": "/",
-    "landscape":"portrait",
+    "orientation":"portrait",
     "start_url": "/",
     "name": "J. Francisco Robles - Portfolio",
     "short_name": "JF Portfolio",
