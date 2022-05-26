@@ -18,7 +18,6 @@ function Layout({ children }: Props) {
   };
   return (
     <Container sm css={{ my: "$xs" }}>
-      <BackgroundParticles />
       <Head>
         <title>J.Francisco Robles - Portfolio</title>
         <meta

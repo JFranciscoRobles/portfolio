@@ -1,29 +1,21 @@
-import { Card, Container, Spacer, Text } from "@nextui-org/react";
-import Layout from "../components/Layout";
+import { Card, Container, Spacer } from "@nextui-org/react";
+import Layout from "../components/Layout/Layout";
 import Header from "../components/Header";
 import SocialBar from "../components/SocialBar";
-import StackContainer from "../components/StackContainer";
+import StackContainer from "../components/Stack/StackContainer";
 import Servicios from "../components/Servicios";
-import { I18n } from "nextjs-i18n";
+import WorksContainer from "../components/Works/WorksContainer";
+import { BackgroundParticles } from "ui";
 
 export default function Web() {
   return (
     <Layout>
+      <BackgroundParticles />
       <Header />
       <Spacer y={1} />
       <Servicios />
       <StackContainer />
-
-      <Text
-        h2
-        size={28}
-        weight={"semibold"}
-        css={{
-          lineHeight: "$xs",
-        }}
-      >
-        <I18n en="Works" es="Trabajos" />
-      </Text>
+      <WorksContainer />
 
       <Spacer y={1} />
       <Container>

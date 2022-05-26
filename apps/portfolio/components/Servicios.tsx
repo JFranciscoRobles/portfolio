@@ -33,6 +33,7 @@ function Servicios({}: Props) {
           {options.map((option, index) => (
             <Grid xs={6} sm={3} key={index}>
               <Card
+                role="presentation"
                 hoverable
                 css={{
                   "&:hover": {

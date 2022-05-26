@@ -1,11 +1,11 @@
 import { Grid, Text } from "@nextui-org/react";
 import { I18n } from "nextjs-i18n";
 import React from "react";
-import { TecnologiesContainer } from "ui";
+import WorkCard from "./WorkCard";
 
 type Props = {};
 
-function StackContainer({}: Props) {
+function WorksContainer({}: Props) {
   return (
     <Grid.Container gap={2}>
       <Grid xs={12}>
@@ -17,17 +17,14 @@ function StackContainer({}: Props) {
             lineHeight: "$xs",
           }}
         >
-          <I18n
-            en="Technologies I love to use"
-            es="Tecnologías que amo utilizar"
-          />
+          <I18n en="Works" es="Trabajos" />
         </Text>
       </Grid>
       <Grid xs={12}>
-        <TecnologiesContainer />
+        <WorkCard />
       </Grid>
     </Grid.Container>
   );
 }
 
-export default StackContainer;
+export default WorksContainer;

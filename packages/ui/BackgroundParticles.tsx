@@ -21,7 +21,7 @@ let options: ISourceOptions = {
   },
   particles: {
     number: {
-      value: 13,
+      value: 7,
     },
     color: {
       value: ["#C9C9C9"],

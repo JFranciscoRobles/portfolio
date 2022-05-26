@@ -8,6 +8,7 @@ type CardProps = {
 const TecnologiesCard = ({ data }: CardProps) => {
   return (
     <Card
+      role="presentation"
       hoverable
       css={{
         "&:hover": {
@@ -18,7 +19,13 @@ const TecnologiesCard = ({ data }: CardProps) => {
       <Card.Body>
         <Grid.Container justify="center">{data.logo}</Grid.Container>
       </Card.Body>
-      <Card.Footer>
+      <Card.Footer
+        css={{
+          "@media screen and (max-width: 640px)": {
+            p: 2,
+          },
+        }}
+      >
         <Text b css={{ textAlign: "center", w: "100%" }}>
           {data.nombre}
         </Text>

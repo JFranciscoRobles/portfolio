@@ -16,6 +16,8 @@ function Header({}: Props) {
           height={210}
           priority
           src="/avatar.webp"
+          placeholder="blur"
+          blurDataURL={"/avatar.webp"}
           alt="Jose Francisco Robles Acosta"
           objectFit="cover"
         />
