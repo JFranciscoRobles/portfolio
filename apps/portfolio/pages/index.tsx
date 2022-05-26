@@ -5,7 +5,10 @@ import SocialBar from "../components/SocialBar";
 import StackContainer from "../components/Stack/StackContainer";
 import Servicios from "../components/Servicios";
 import WorksContainer from "../components/Works/WorksContainer";
-import { BackgroundParticles } from "ui";
+import dynamic from "next/dynamic";
+const BackgroundParticles = dynamic(() => import("ui/BackgroundParticles"), {
+  ssr: false,
+});
 
 export default function Web() {
   return (
