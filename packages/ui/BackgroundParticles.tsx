@@ -16,6 +16,9 @@ export default BackgroundParticles;
 
 let options: ISourceOptions = {
   fpsLimit: 60,
+  motion: {
+    disable: true,
+  },
   background: {
     color: "transparent",
   },
