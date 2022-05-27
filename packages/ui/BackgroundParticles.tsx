@@ -15,7 +15,7 @@ function BackgroundParticles({}: Props) {
 export default BackgroundParticles;
 
 let options: ISourceOptions = {
-  fpsLimit: 120,
+  fpsLimit: 60,
   background: {
     color: "transparent",
   },
