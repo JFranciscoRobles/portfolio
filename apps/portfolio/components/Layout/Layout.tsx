@@ -1,9 +1,13 @@
 import { Container, Grid, Button, Link, Text, Spacer } from "@nextui-org/react";
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { I18n } from "nextjs-i18n";
 import React from "react";
-import { BackgroundParticles, ToggleTheme, UiButton } from "ui";
+import { ToggleTheme, UiButton } from "ui";
+const BackgroundParticles = dynamic(() => import("ui/BackgroundParticles"), {
+  ssr: false,
+});
 
 type Props = {
   children: React.ReactNode;
@@ -25,7 +29,17 @@ function Layout({ children }: Props) {
           content="J. Francisco Robles Js Full Stack Developer, actualmente viviendo en Tijuana - Mexico, diseñando y desarrollando aplicaciones web."
         />
       </Head>
-      <Grid.Container justify="flex-end" alignItems="center">
+      <BackgroundParticles />
+      <Grid.Container
+        justify="flex-end"
+        alignItems="center"
+        css={{
+          position: "sticky",
+          top: 0,
+          zIndex: 90,
+          background: "$background",
+        }}
+      >
         <ToggleTheme />
         <UiButton auto light onClick={() => handleClick()}>
           <Text
@@ -42,7 +56,7 @@ function Layout({ children }: Props) {
             ES
           </Text>
         </UiButton>
-        <Link href="mailto:josefrancisco.roblesacost    a@gmail.com">
+        <Link href="mailto:josefrancisco.roblesacosta@gmail.com">
           <Button size={"sm"}>
             <I18n en="Hire me!" es="¡Contratame!" />
           </Button>

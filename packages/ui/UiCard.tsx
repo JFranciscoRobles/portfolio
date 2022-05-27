@@ -28,7 +28,8 @@ function UiCard({ data }: Props) {
       </Card.Body>
       <Card.Footer
         css={{
-          "@media screen and (max-width: 640px)": {
+          p: 0,
+          "@sm": {
             p: 2,
           },
         }}

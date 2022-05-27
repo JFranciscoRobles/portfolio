@@ -21,7 +21,9 @@ function WorksContainer({}: Props) {
         </Text>
       </Grid>
       <Grid xs={12}>
-        <WorkCard />
+        <Grid.Container gap={2}>
+          <WorkCard />
+        </Grid.Container>
       </Grid>
     </Grid.Container>
   );
