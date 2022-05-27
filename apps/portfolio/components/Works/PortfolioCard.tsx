@@ -1,8 +1,7 @@
 import React from "react";
 import { Button, Card, Grid, Link, Text } from "@nextui-org/react";
 import { I18n } from "nextjs-i18n";
-
-import { SiNextdotjs, SiTurbosquid, SiVercel } from "react-icons/si";
+import { SiNextdotjs, SiVercel } from "react-icons/si";
 
 type Props = {};
 
@@ -61,12 +60,17 @@ function PortfolioCard({}: Props) {
                 </Text>
               </Grid>
               <Grid justify="center">
-                <Button size={"sm"}>
-                  <I18n
-                    en="See this code on Github"
-                    es="Ver este código en Github"
-                  />
-                </Button>
+                <Link
+                  href="https://github.com/JFranciscoRobles/portfolio"
+                  target={"_blank"}
+                >
+                  <Button size={"sm"}>
+                    <I18n
+                      en="See this code on Github"
+                      es="Ver este código en Github"
+                    />
+                  </Button>
+                </Link>
               </Grid>
             </Grid.Container>
           </Grid>

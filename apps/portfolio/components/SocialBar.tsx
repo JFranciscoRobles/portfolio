@@ -12,7 +12,13 @@ function SocialBar({}: Props) {
       {options.map((option) => (
         <Grid key={option.name}>
           <Link href={option.href} target={option.target ? "_blank" : "_self"}>
-            <UiButton aria-label={option.name} auto light icon={option.icon} />
+            <UiButton
+              css={{ zIndex: 0 }}
+              aria-label={option.name}
+              auto
+              light
+              icon={option.icon}
+            />
           </Link>
         </Grid>
       ))}
