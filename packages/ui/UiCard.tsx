@@ -1,11 +1,18 @@
-import { Card, Text, Grid } from "@nextui-org/react";
-import { typeTecnlogias } from "./stackData";
+import { Card, Grid, Text } from "@nextui-org/react";
+import React from "react";
 
-type CardProps = {
-  data: typeTecnlogias;
+export type typeUiCard = {
+  nombre: any;
+  logo: any;
+  description: string;
+  color: string;
 };
 
-const TecnologiesCard = ({ data }: CardProps) => {
+type Props = {
+  data: typeUiCard;
+};
+
+function UiCard({ data }: Props) {
   return (
     <Card
       role="presentation"
@@ -32,6 +39,6 @@ const TecnologiesCard = ({ data }: CardProps) => {
       </Card.Footer>
     </Card>
   );
-};
+}
 
-export default TecnologiesCard;
+export default UiCard;

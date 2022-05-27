@@ -10,44 +10,38 @@ import {
 import { FaGithub, FaReact } from "react-icons/fa";
 
 import { Text } from "@nextui-org/react";
+import { typeUiCard } from "ui/UiCard";
 
-export type typeTecnlogias = {
-  nombre: string;
-  logo: any;
-  url: string;
-  color: string;
-};
-
-export const dataTecnologias: typeTecnlogias[] = [
+export const dataTecnologias: typeUiCard[] = [
   {
     nombre: "Github",
     logo: <FaGithub size={30} width={"100%"} />,
-    url: "",
+    description: "",
     color: "$gray300",
   },
   {
     nombre: "Typescript",
     logo: <SiTypescript size={30} width={"100%"} />,
-    url: "",
+    description: "",
     color: "$red300",
   },
   {
     nombre: "React",
     logo: <FaReact size={30} width={"100%"} />,
-    url: "",
+    description: "",
     color: "$blue300",
   },
   {
     nombre: "Nextjs",
     logo: <SiNextdotjs size={30} width={"100%"} />,
-    url: "",
+    description: "",
     color: "$gray300",
   },
 
   {
     nombre: "TailwindCss",
     logo: <SiTailwindcss size={30} width={"100%"} />,
-    url: "",
+    description: "",
     color: "$blue300",
   },
   {
@@ -57,7 +51,7 @@ export const dataTecnologias: typeTecnlogias[] = [
         NextUI
       </Text>
     ),
-    url: "",
+    description: "",
     color: "$gray300",
   },
 
@@ -68,32 +62,32 @@ export const dataTecnologias: typeTecnlogias[] = [
         Radix
       </Text>
     ),
-    url: "",
+    description: "",
     color: "$purple300",
   },
 
   {
     nombre: "PrismaDB",
     logo: <SiPrisma size={30} width={"100%"} />,
-    url: "",
+    description: "",
     color: "$green300",
   },
   {
     nombre: "Strapi",
     logo: <SiStrapi size={30} width={"100%"} />,
-    url: "",
+    description: "",
     color: "$blue300",
   },
   {
     nombre: "Vercel",
     logo: <SiVercel size={30} width={"100%"} />,
-    url: "",
+    description: "",
     color: "$gray300",
   },
   {
     nombre: "DigitalOcean",
     logo: <SiDigitalocean size={30} width={"100%"} />,
-    url: "",
+    description: "",
     color: "$blue300",
   },
 ];

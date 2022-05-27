@@ -1,8 +1,8 @@
 import { Grid, Text } from "@nextui-org/react";
 import { I18n } from "nextjs-i18n";
 import React from "react";
+import { UiCard } from "ui";
 import { dataTecnologias } from "./stackData";
-import TecnologiesCard from "./TecnologiesCard";
 
 type Props = {};
 
@@ -32,7 +32,7 @@ function StackContainer({}: Props) {
               md={item.nombre !== "DigitalOcean" ? 3 : 6}
               key={index}
             >
-              <TecnologiesCard data={item} />
+              <UiCard data={item} />
             </Grid>
           ))}
         </Grid.Container>
