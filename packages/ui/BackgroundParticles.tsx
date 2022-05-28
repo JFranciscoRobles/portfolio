@@ -41,8 +41,8 @@ let options: ISourceOptions = {
     move: {
       enable: true,
       speed: {
-        min: 2,
-        max: 3,
+        min: 1,
+        max: 1,
       },
       outModes: {
         default: "bounce",

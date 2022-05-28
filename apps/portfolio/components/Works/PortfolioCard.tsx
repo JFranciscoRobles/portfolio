@@ -26,7 +26,7 @@ function PortfolioCard({}: Props) {
             <Text size={18} css={{ lineHeight: "$sm" }}>
               <I18n
                 en="My wish was to create a portfolio that is as clear as possible and which has a great set of features, such as I18n, dark mode, animations, accessible and responsive. You are welcome to view the code on Github and feel free to use any part of the code."
-                es="Mi deseo fue crear un portafolio lo mas claro posible y el cual tenga una gran serie de funciones, como I18n, modo oscuro, animaciones, accesible y que sea responsivo. Estas invitado a ver el codigo en Github y sientete libre de utilizar cualquier parte del codigo."
+                es="Mi deseo fue crear un portafolio lo más claro posible y el cual tenga una gran serie de funciones, como I18n, modo oscuro, animaciones, accesible y que sea responsivo. Estás invitado a ver el código en Github y siéntete libre de utilizar cualquier parte del código."
               />
             </Text>
           </Grid>

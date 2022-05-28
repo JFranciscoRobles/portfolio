@@ -39,10 +39,7 @@ function Servicios({}: Props) {
             lineHeight: "$xs",
           }}
         >
-          <I18n
-            en="I can help you develop a"
-            es="Puedo ayudarte a desarrollar"
-          />
+          <I18n en="I can help you develop" es="Puedo ayudarte a desarrollar" />
         </Text>
       </Grid>
       <Grid xs={12}>

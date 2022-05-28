@@ -51,7 +51,7 @@ function ProbienCard({}: Props) {
                         <Text size={18} css={{ lineHeight: "$sm" }}>
                           <I18n
                             en="Probien's Catalog, the company wanted to renew its Public Website, since it was very slow, contained several errors and was very expensive. Probien commissioned me to create a new platform that contains everything you need, a new experience for your customers, a new identity and a new image."
-                            es="Catalogo de Probien, la empresa buscaba renovar su Sitio Web Publico, ya que esta era muy lenta, contenia diversos errores y era muy costoso. Probien me encargo crear una nueva plataforma que contenga todo lo que necesitaba, una nueva experiencia para sus clientes, una nueva identidad y una nueva imagen."
+                            es="Catálogo de Probien, la empresa buscaba renovar su Sitio Web Público, ya que esta era muy lenta, contenía diversos errores y era muy costoso. Probien me encargo crear una nueva plataforma que contenga todo lo que necesitaba, una nueva experiencia para sus clientes, una nueva identidad y una nueva imagen."
                           />
                         </Text>
                       </Grid>
@@ -127,7 +127,7 @@ function ProbienCard({}: Props) {
                         <Text size={18} css={{ lineHeight: "$sm" }}>
                           <I18n
                             en="This was Probien's second commission, there are properties that for different reasons cannot be in the public catalog, so they asked me to develop a website in which only Probien's internal team can make use of it."
-                            es="Este fue el segundo encargo de Probien, existen propiedades que por distintas razones estas no pueden estar en el catalogo publico, asi que me pidieron desarrollar un sitio web en el cual solamente el equipo interno de Probien pueda hacer uso de el. "
+                            es="Este fue el segundo encargo de Probien, existen propiedades que por distintas razones estas no pueden estar en el catálogo público, así que me pidieron desarrollar un sitio web en el cual solamente el equipo interno de Probien pueda hacer uso de él."
                           />
                         </Text>
                       </Grid>
@@ -197,7 +197,7 @@ function ProbienCard({}: Props) {
                         <Text size={18} css={{ lineHeight: "$sm" }}>
                           <I18n
                             en="Probien Formats is the third order of Probien, this platform was developed to digitalize the company's processes, in which they sought to streamline the process of contracts between the Probien Agent and the clients."
-                            es="Probien Formatos es el tercer encargo de Probien, esta plataforma fue desarrollada para digital los procesos de la empresa, en el cual buscaban agilizar el prceso de contratos entre el Agente de Probien y los clientes."
+                            es="Probien Formatos es el tercer encargo de Probien, esta plataforma fue desarrollada para digital los procesos de la empresa, en el cual buscaban agilizar el proceso de contratos entre el Agente de Probien y los clientes."
                           />
                         </Text>
                       </Grid>
@@ -235,7 +235,7 @@ function ProbienCard({}: Props) {
             </Grid>
             <Grid xs={12} sm={2}>
               <StyledList aria-label="tabs">
-                <StyledTrigger value="tab1">Probien Catalogo</StyledTrigger>
+                <StyledTrigger value="tab1">Probien Catálogo</StyledTrigger>
                 <StyledTrigger value="tab2">Probien BlackMarket</StyledTrigger>
                 <StyledTrigger value="tab3">Probien Formatos</StyledTrigger>
               </StyledList>

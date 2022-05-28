@@ -46,17 +46,14 @@ function Header({}: Props) {
             <Text size={18} css={{ lineHeight: "$sm" }}>
               <I18n
                 en=" Currently living in Tijuana - Mexico, designing and developing web applications, modernizing the websites of companies and small businesses."
-                es="Actualmente viviendo en Tijuana - Mexico, diseñando y
-          desarrollando aplicaciónes web, modernizando los sitios web de
-          empresas y pequeños negocios."
+                es="Actualmente viviendo en Tijuana - México, diseñando y desarrollando aplicaciones web, modernizando los sitios web de empresas y pequeños negocios."
               />
             </Text>
             <Spacer y={0.2} />
             <Text size={18} css={{ lineHeight: "$sm" }}>
               <I18n
                 en="Knowledge in technologies such as Figma, React, Nextjs and StrapiCMS."
-                es="Familiarizado con tecnologias como Figma, React, Nextjs y
-              StrapiCMS."
+                es="Familiarizado con tecnologías como Figma, React, Nextjs y StrapiCMS."
               />
             </Text>
           </Grid>

@@ -30,7 +30,7 @@ export const optionsServices: typeUiCard[] = [
     color: "$red300",
   },
   {
-    nombre: <I18n en="Consultant" es="Consultoria" />,
+    nombre: <I18n en="Consultant" es="Consultoría" />,
     logo: <BsPencilSquare size={36} />,
     description: "",
     color: "$green300",
@@ -45,7 +45,7 @@ export const optionsHelps: typeUiCard[] = [
     color: "$blue300",
   },
   {
-    nombre: <I18n en="Catalogs" es="Catalogos" />,
+    nombre: <I18n en="Catalogs" es="Catálogos" />,
     logo: <BsFillGrid1X2Fill size={30} />,
     description: "",
     color: "$blue300",

@@ -26,7 +26,7 @@ function Layout({ children }: Props) {
         <title>J.Francisco Robles - Portfolio</title>
         <meta
           name="description"
-          content="J. Francisco Robles Js Full Stack Developer, actualmente viviendo en Tijuana - Mexico, diseñando y desarrollando aplicaciones web."
+          content="J. Francisco Robles Js Full Stack Developer, actualmente viviendo en Tijuana - México, diseñando y desarrollando aplicaciones web."
         />
       </Head>
       <BackgroundParticles />
