@@ -12,19 +12,19 @@ import { typeUiCard } from "ui/UiCard";
 
 export const optionsServices: typeUiCard[] = [
   {
-    nombre: <I18n en="UI/UX Designer" es="Desarollador UI/UX" />,
+    nombre: <I18n en="UI/UX Designer" es="Desarrollador UI/UX" />,
     logo: <FaDrawPolygon size={36} />,
     description: "",
     color: "$yellow300",
   },
   {
-    nombre: <I18n en="Front-end Developer" es="Desarollador Front-End" />,
+    nombre: <I18n en="Front-end Developer" es="Desarrollador Front-End" />,
     logo: <RiPagesLine size={36} />,
     description: "",
     color: "$blue300",
   },
   {
-    nombre: <I18n en="Back-end Developer" es="Desarollador Back-End" />,
+    nombre: <I18n en="Back-end Developer" es="Desarrollador Back-End" />,
     logo: <AiOutlineDatabase size={36} />,
     description: "",
     color: "$red300",
