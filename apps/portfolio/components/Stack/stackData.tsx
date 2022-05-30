@@ -39,7 +39,7 @@ export const dataTecnologias: typeUiCard[] = [
   },
 
   {
-    nombre: "TailwindCss",
+    nombre: "Tailwind",
     logo: <SiTailwindcss size={30} width={"100%"} />,
     description: "",
     color: "$blue300",
