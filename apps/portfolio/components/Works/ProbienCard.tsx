@@ -17,8 +17,10 @@ type Props = {};
 
 function ProbienCard({}: Props) {
   return (
-    <Card role="presentation" hoverable>
-      <Card.Body css={{ overflow: "hidden" }}>
+    <Card role="presentation" hoverable css={{ minHeight: 300 }}>
+      <Card.Body
+        css={{ overflow: "hidden", display: "flex", justifyContent: "center" }}
+      >
         <Tabs.Root defaultValue="tab1" orientation="vertical">
           <Grid.Container gap={1}>
             <Grid xs={12} sm={10}>

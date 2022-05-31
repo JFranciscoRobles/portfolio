@@ -1,4 +1,4 @@
-import { Card, Container, Spacer } from "@nextui-org/react";
+import { Spacer } from "@nextui-org/react";
 import Layout from "../components/Layout/Layout";
 import Header from "../components/Header";
 import Servicios from "../components/Services/Servicios";
