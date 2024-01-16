@@ -36,7 +36,7 @@ const Hero = (props: Props) => {
             <TwitterIcon className=" w-6 h-6 fill-foreground" />
           </Button>
         </Link>
-        <Link href={"https://www.linkedin.com/in/jfranciscorobles/"}>
+        <Link href={"https://github.com/JFranciscoRobles"}>
           <Button variant={"ghost"}>
             <LinkedinIcon className=" w-6 h-6 fill-foreground" />
           </Button>
